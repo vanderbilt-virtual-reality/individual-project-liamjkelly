@@ -11,7 +11,7 @@ public class BottleCalculation : MonoBehaviour
     private bool hasBeenGrabbed = false;
     
     private float totalTons = 8000000f;
-    private float weight = 0.03f;
+    private float weight = 30f;
     private float tonsLeft;
     // Start is called before the first frame update
     void Start()
