@@ -25,6 +25,6 @@ public class BottleCalculation : MonoBehaviour
         tonsLeft = totalTons - (total * weight);
         total++;
         myText.text = "Plastic Bottles picked up: " + total + "\n" + tonsLeft + " tons of plastic in the ocean this year.";
-        Destroy(other.gameObject);
+        Destroy(this.gameObject);
     }
 }
