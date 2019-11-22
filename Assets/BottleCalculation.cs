@@ -8,7 +8,6 @@ public class BottleCalculation : MonoBehaviour
     static int total = 0;
     public Text myText;
     private BoxCollider grabbable;
-    private bool hasBeenGrabbed = false;
     
     private float totalTons = 8000000f;
     private float weight = 30f;
@@ -16,7 +15,7 @@ public class BottleCalculation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        grabbable = grabbable.GetComponent<BoxCollider>();
+        grabbable = GetComponent<BoxCollider>();
         myText = myText.GetComponent<Text>();
         myText.text = "Plastic Bottles picked up: " + total + "\n" + tonsLeft + " tons of plastic in the ocean this year.";
     }
