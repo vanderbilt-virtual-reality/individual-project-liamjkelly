@@ -29,8 +29,8 @@ public class BottleCalculation : MonoBehaviour
             print(tonsLeft);
             print(other.gameObject);
             print(total);
-            myText.text = "Bottles picked up: " + total.ToString() + ". " + tonsLeft.ToString() + " grams of plastic in the ocean this year.";
-            print("Bottles picked up: " + total.ToString() + ". " + tonsLeft.ToString() + " grams of plastic in the ocean this year.");
+            myText.text = "Bottles picked up: " + total.ToString() + ". " + tonsLeft.ToString() + " grams of plastic will enter the ocean this year.";
+            print("Bottles picked up: " + total.ToString() + ". " + tonsLeft.ToString() + " grams of plastic will enter the ocean this year.");
             Destroy(other.gameObject);
         }
            
