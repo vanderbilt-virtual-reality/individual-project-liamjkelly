@@ -7,24 +7,32 @@ public class BottleCalculation : MonoBehaviour
 {
     static int total = 0;
     public Text myText;
-    private BoxCollider grabbable;
     
-    private float totalTons = 8000000f;
-    private float weight = 30f;
-    private float tonsLeft;
+    private int totalTons = 8000000;
+    private int weight = 30;
+    private int tonsLeft;
     // Start is called before the first frame update
     void Start()
     {
-        grabbable = GetComponent<BoxCollider>();
+        tonsLeft = totalTons;
         myText = myText.GetComponent<Text>();
-        myText.text = "Plastic Bottles picked up: " + total + "\n" + tonsLeft + " tons of plastic in the ocean this year.";
+        myText.text = "Bottles picked up: " + total.ToString() + ". " + tonsLeft.ToString() + " grams of plastic in the ocean this year.";
+        print(total);
     }
     
     private void OnTriggerEnter(Collider other)
     {
-        tonsLeft = totalTons - (total * weight);
-        total++;
-        myText.text = "Plastic Bottles picked up: " + total + "\n" + tonsLeft + " tons of plastic in the ocean this year.";
-        Destroy(this.gameObject);
+        if (other.gameObject.tag == "Bottle")
+        {
+            total++;
+            tonsLeft = totalTons - (total * weight);
+            print(tonsLeft);
+            print(other.gameObject);
+            print(total);
+            myText.text = "Bottles picked up: " + total.ToString() + ". " + tonsLeft.ToString() + " grams of plastic in the ocean this year.";
+            print("Bottles picked up: " + total.ToString() + ". " + tonsLeft.ToString() + " grams of plastic in the ocean this year.");
+            Destroy(other.gameObject);
+        }
+           
     }
 }
