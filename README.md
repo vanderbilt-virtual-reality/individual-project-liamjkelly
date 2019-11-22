@@ -1,9 +1,11 @@
 # individual-project-liamjkelly
 
+[Here](https://drive.google.com/file/d/1p8jdot4-vHfs6whv-HXBEgs5WsGMPGK9/view?usp=sharing) is a video of the project in action.
+
 ## Need to know items
 
 * Unity version: 2019.2.0f1
-* 
+* Click BeachCleanup.exe, an executable that is targeted for Windows use on an x86_64 architecture. The .exe file must be in the same folder as the folder BeachCleanup_Data, or else it will not run. The build files are located in the `BuildFiles` directory.
 
 ## Why did you make this? Intention/Motivation
 
